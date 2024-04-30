@@ -1,4 +1,3 @@
-# Filename: var_to_dict.py
 
 def convert_list_to_dict():
     d = [
