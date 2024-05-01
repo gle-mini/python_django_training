@@ -43,7 +43,6 @@ class TestAllIn(unittest.TestCase):
         results = analyze_inputs(input_string)
         self.assertIsNone(results)  # Expected None to indicate no processing should occur
 
-# This allows the test suite to be run from the command line
 if __name__ == "__main__":
     unittest.main()
 
