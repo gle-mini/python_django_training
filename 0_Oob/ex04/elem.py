@@ -11,7 +11,8 @@ class Text(str):
         """
         Do you really need a comment to understand this method?..
         """
-        return super().__str__().replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace('\n', '\n<br />\n')
+        return super().__str__().replace('<', '&lt;').replace('>',
+                                                              '&gt;').replace('"', '"').replace('\n', '\n<br />\n')
 
 
 
