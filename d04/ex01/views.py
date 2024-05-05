@@ -1,15 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
+def django(request):
+    return render(request, 'ex01/django.html')
 
-from django.shortcuts import render
+def display(request):
+    return render(request, 'ex01/display.html')
 
-def django_intro(request):
-    return render(request, 'django_intro.html')
-
-def display_page(request):
-    return render(request, 'display_page.html')
-
-def template_engine(request):
-    return render(request, 'template_engine.html')
+def template(request):
+    return render(request, 'ex01/template.html')
 

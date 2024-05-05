@@ -1,0 +1,56 @@
+{% extends 'ex01/base.html' %} {% block title %}
+<title>Displaying a Static Web Page in Django</title>
+{% endblock title %} {% block content %}
+<body>
+    <header>
+        <h1>Understanding Django: Displaying a Static Web Page</h1>
+    </header>
+    <section>
+        <h2>Introduction</h2>
+        <p>
+            This document outlines the steps involved in displaying a static web page in a Django application using a simple template system and views.
+        </p>
+    </section>
+    <section>
+        <h2>Step 1: Client Sends HTTP Request</h2>
+        <p>
+            The process begins when a client (such as a web browser) sends an HTTP request to the Django server for a specific URL.
+        </p>
+    </section>
+    <section>
+        <h2>Step 2: URL Dispatcher</h2>
+        <p>
+            Django's URL dispatcher reads the URL and matches it to a predefined pattern in the URL configuration. The corresponding view function is then called.
+        </p>
+    </section>
+    <section>
+        <h2>Step 3: View Function</h2>
+        <p>
+            The view function is responsible for processing the request. It performs any necessary data retrieval or processing. For a static page, this step might simply involve preparing context data for the template.
+        </p>
+    </section>
+    <section>
+        <h2>Step 4: Template Rendering</h2>
+        <p>
+            Django uses the context data to render the template. The template contains the static HTML structure and placeholders for dynamic content, which are filled with the context data provided by the view.
+        </p>
+    </section>
+    <section>
+        <h2>Step 5: Response Creation</h2>
+        <p>
+            Once the template is rendered into a complete HTML page, it is wrapped into an HTTP response object by the view.
+        </p>
+    </section>
+    <section>
+        <h2>Step 6: Sending the Response</h2>
+        <p>
+            The HTTP response object is sent back to the client, displaying the final web page in the user's browser.
+        </p>
+    </section>
+    <footer>
+        <p>For more details on how Django processes requests and responses, you can refer to the Django documentation.</p>
+    </footer>
+</body>
+</html>
+
+{% endblock content %}

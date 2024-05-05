@@ -1,0 +1,59 @@
+{% extends 'ex01/base.html' %} {% load static %} {% block title %}
+<title>Django Template Engine Overview</title>
+{% endblock title %} {% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}" />
+{% endblock style %} {% block content %}
+
+<body>
+    <header>
+        <h1>Django Template Engine Overview</h1>
+    </header>
+    <section>
+        <h2>Introduction to Django's Template Engine</h2>
+        <p>
+            Django's template engine provides a powerful way for developers to generate HTML dynamically. The primary function of the template engine is to combine template markup with a template context to produce an HTML document.
+        </p>
+    </section>
+    <section>
+        <h2>Core Components of the Template Engine</h2>
+        <h3>Templates</h3>
+        <p>
+            Templates are text files which define the structure or layout of a file (like HTML), with placeholders used for representing actual content. These placeholders get replaced with actual data when the template is rendered.
+        </p>
+        <h3>Context</h3>
+        <p>
+            A context is a dictionary-like object that maps variable names to Python objects. In the process of rendering a template, Django replaces the placeholders with the values from the context.
+        </p>
+        <h3>Tags and Filters</h3>
+        <p>
+            Django templates use tags and filters to implement logic and formatting. Tags provide a way to insert dynamic content and to apply loop and conditional logic, while filters modify the display of variables.
+        </p>
+        <h3>Template Inheritance</h3>
+        <p>
+            Template inheritance allows you to build a base "skeleton" template that contains all the common elements of your site and defines blocks that child templates can override.
+        </p>
+    </section>
+    <section>
+        <h2>How the Template Engine Works</h2>
+        <p>
+            When a Django view receives a request, it prepares data for the response, often in the form of a context dictionary. This data is passed to the template engine along with the chosen template. The engine parses the template and replaces tags and placeholders with appropriate context data to produce a final HTML page.
+        </p>
+    </section>
+    <section>
+        <h2>Additional Functionality</h2>
+        <p>
+            Django's template engine also supports:
+            <ul>
+                <li>Custom tags and filters, allowing developers to add their own functionality to the templating system.</li>
+                <li>Automatic HTML escaping to prevent cross-site scripting attacks by safely encoding data.</li>
+                <li>Caching mechanisms to improve performance by avoiding re-rendering templates when not necessary.</li>
+            </ul>
+        </p>
+    </section>
+    <footer>
+        <p>For a deeper understanding of how Django's templating works, refer to the official Django documentation on templates.</p>
+    </footer>
+</body>
+
+
+{% endblock content %}

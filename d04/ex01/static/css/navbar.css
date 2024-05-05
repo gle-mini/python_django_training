@@ -1,0 +1,25 @@
+.navbar {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.navbar-title {
+    margin: 0;
+    color: #333;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #007bff; /* Bootstrap blue */
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}

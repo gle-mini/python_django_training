@@ -1,0 +1,13 @@
+{% load static %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}" />
+{% endblock style %}
+
+<div class="navbar">
+    <h1 class="navbar-title">EX01</h1>
+    <div class="navbar-links">
+		<a href="/ex01/django">Django</a>
+		<a href="/ex01/display">Display</a>
+		<a href="/ex01/templates">Templates</a>
+    </div>
+</div>
