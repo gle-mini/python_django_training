@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'ex00',
     'ex01',
     'ex02',
+    'ex03',
 ]
 
 LOG_FILE_PATH = os.path.join(BASE_DIR, 'ex02', 'submission_logs.txt')
