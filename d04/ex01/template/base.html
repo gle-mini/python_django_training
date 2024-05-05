@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block style %}{% endblock %}
+    <title>{% block title %}Default Title{% endblock %}</title>
+</head>
+<body>
+    {% include 'nav.html' %}
+    {% block content %}{% endblock %}
+</body>
+</html>
+
