@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 import logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,7 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ex00',
     'ex01',
+    'ex02',
 ]
+
+LOG_FILE_PATH = os.path.join(BASE_DIR, 'ex02', 'submission_logs.txt')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
