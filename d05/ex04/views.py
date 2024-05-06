@@ -122,39 +122,23 @@ from .models import Movies
 
 def remove(request):
     if request.method == 'POST':
-        # Get the selected film title from the form
         selected_title = request.POST.get('film_title')
 
-        # Check if a film title is selected
         if selected_title:
             try:
-                # Query the database for the movie with the selected title
                 movie = Movies.objects.get(title=selected_title)
-                
-                # Delete the movie from the database
                 movie.delete()
-                
-                # Fetch the remaining movie titles from the database
                 movie_titles = Movies.objects.values_list('title', flat=True)
-                
-                # Render the form with the updated list of movie titles
                 return render(request, 'ex04/remove.html', {'movie_titles': movie_titles})
             except Movies.DoesNotExist:
-                # Handle the case where the selected movie does not exist
                 return HttpResponse("Selected movie does not exist.")
             except Exception as e:
-                # Handle other exceptions
                 return HttpResponse(f"An error occurred: {e}")
         else:
-            # Handle the case where no film title is selected
             return HttpResponse("No film title selected.")
     else:
         try:
-            # Fetch all movie titles from the database
             movie_titles = Movies.objects.values_list('title', flat=True)
-            
-            # Render the form with the list of movie titles
             return render(request, 'ex04/remove.html', {'movie_titles': movie_titles})
         except Exception as e:
-            # Handle exceptions
             return HttpResponse(f"An error occurred: {e}")
