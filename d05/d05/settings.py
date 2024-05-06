@@ -87,10 +87,6 @@ DATABASES = {
     }
 }
 
-if 'test' in sys.argv:
-    DATABASES['default']['USER'] = 'djangouser'
-    DATABASES['default']['NAME'] = 'test_mydbname'
-
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
