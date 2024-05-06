@@ -26,7 +26,7 @@ def init(request):
         cur.close()
         return HttpResponse("OK")
     except Exception as e:
-        return HttpResponse(f"An error occurred: {e}")
+        return HttpResponse(f"An error occurred: {e}", status=500)
     finally:
         if conn is not None:
             conn.close()
